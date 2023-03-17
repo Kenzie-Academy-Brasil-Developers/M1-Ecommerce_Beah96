@@ -214,3 +214,8 @@ main {
 .none{
   display: none;
 }
+
+.cart-list{
+  max-height: 300px;
+  overflow-y: auto;
+}
