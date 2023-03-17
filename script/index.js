@@ -215,10 +215,17 @@ shirtButton.addEventListener("click", function(){
 
 //Configuração da Barra de pesquisa
 function findProductBySearch(){
-  let search = document.querySelector(".search-input").value
+  let value = document.querySelector(".search-input").value
+  let search = value.replace(' ','')
+  let search2= search.toLowerCase()
+
   let searchItem =[];
   for(let i=0; i<data.length; i++){
-    if(data[i].nameItem == search || data[i].tag[0] == search ){
+    let productName = data[i].nameItem.replace(' ','')
+    let nameProduct = productName.toLowerCase()
+    let tagMin = data[i].tag[0].toLowerCase()
+
+    if(nameProduct == search2 ||tagMin == search2 ){
       searchItem.push(data[i])
     }
   }
@@ -237,7 +244,6 @@ function(){
     alert("Não há resultados compativeis com a pesquisa")
   }
 })
-
 
 
 createProductCards(data)
