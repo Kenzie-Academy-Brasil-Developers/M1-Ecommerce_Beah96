@@ -1,5 +1,4 @@
 // Banco de dados dos produtos
-
 const data = [
   {
     id: 1,
@@ -62,3 +61,4 @@ const data = [
     tag: ["Camisetas"],
   },
 ];
+export default data
